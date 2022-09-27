@@ -38,6 +38,7 @@ public class Main {
          ingredientes.add(ingrediente2);
          
          //agregar pasos
+         //no los agregue 
          
          receta.setIngredientes(ingredientes);
      }
