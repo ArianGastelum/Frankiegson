@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.itson.franky.enumerador;
+package mx.itson.frankiegson.enumerador;
 
 /**
  *
- * @author My Pc
+ * @author
  */
 public enum Dificultad {
     FACIL, INTERMEDIO, LEGENDARIO;

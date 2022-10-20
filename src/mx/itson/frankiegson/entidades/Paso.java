@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.itson.franky.entidades;
+package mx.itson.frankiegson.entidades;
 
 /**
  *
- * @author My Pc
+ * @author
  */
 public class Paso {
     private int orden;

@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package mx.itson.franky.entidades;
+package mx.itson.frankiegson.entidades;
 
+import com.google.gson.Gson;
 import java.util.List;
-import mx.itson.franky.enumerador.Dificultad;
+import mx.itson.frankiegson.enumerador.Dificultad;
 
 /**
  *
- * @author My Pc
+ * @author
  */
 public class Receta {
     
@@ -21,6 +22,21 @@ public class Receta {
     private List <Ingrediente> ingredientes;
     private List <Paso> pasos; 
     private Dificultad dificultad;
+    private Usuario usuario;
+
+    /**
+     * @return the usuario
+     */
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
     
     /**
      * @return the nombre
@@ -118,5 +134,15 @@ public class Receta {
      */
     public void setDificultad(Dificultad dificultad) {
         this.dificultad = dificultad;
+    }
+    public Receta deserielizar(String json){
+    Receta receta = new Receta();
+    try{ 
+        
+        receta = new Gson().fromJson(json, Receta.class);
+    }catch(Exception ex) {
+        System.out.print("Ocurrio un error: "+ ex.getMessage());
+        }
+    return receta;
     }
 }
